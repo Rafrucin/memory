@@ -92,8 +92,21 @@ P
 	transition: all .3s ease-in-out;
 }
 
-input[type=submit] {
+input[type=submit] 
+{	
+	color: #604020;
+    font-family: 'Lobster', sans-serif;
+    font-size: 28px;
+	padding:15px; 
+    background:#16181E; 
+    border:4px solid #604020;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+	border-radius: 5px; 
+}
 	
+input[type=submit]:hover
+{
 	color: #604020;
     font-family: 'Lobster', sans-serif;
     font-size: 28px;
@@ -103,4 +116,4 @@ input[type=submit] {
     cursor:pointer;
     -webkit-border-radius: 5px;
 	border-radius: 5px; 
-	}
+}	
