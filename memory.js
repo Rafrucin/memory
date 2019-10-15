@@ -102,7 +102,7 @@ function hide2cards (a,b)
 	visnr=100;
 	if (pairsleft==0)
 	{
-		$('#ap')[0].play(); 
+		new Audio('snd/ap.wav').play(); 
 		$('.board').html('<h1>You win! <br> Done in '+turncount+' turns</h1> <br> <form><input type="submit" value="Play again?"></form>');
 	}
 	
