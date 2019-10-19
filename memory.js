@@ -1,5 +1,4 @@
 var ruler = 40;
-drawboard(ruler);
 var cards = [];
 var flag = 0;
 var oneVis = false;
@@ -7,6 +6,10 @@ var turncount = 0;
 var visnr;
 var lock=false;
 var pairsleft = ruler/2;
+var ap = new Audio('snd/ap.wav');
+var yes = new Audio('snd/yes.wav');
+
+drawboard(ruler);
 fill(ruler/2);
 
 function drawboard(z)
@@ -79,10 +82,9 @@ function reveal(n)
 
 			if(cards[nr]==cards[visnr])
 			{
-				new Audio('snd/yes.wav').play();
+				yes.play();
 				setTimeout(function(){hide2cards (nr,visnr)}, 750);				
 			}else{
-				//$('#no')[0].play(); 
 				setTimeout(function(){reset2cards (nr,visnr)}, 1000);					
 			}
 			
@@ -102,7 +104,7 @@ function hide2cards (a,b)
 	visnr=100;
 	if (pairsleft==0)
 	{
-		new Audio('snd/ap.wav').play(); 
+		ap.play(); 
 		$('.board').html('<h1>You win! <br> Done in '+turncount+' turns</h1> <br> <form><input type="submit" value="Play again?"></form>');
 	}
 	
